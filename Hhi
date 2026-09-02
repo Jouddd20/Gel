@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مفاجأة خاصة لكِ!</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Tahoma', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gift-box {
+            background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ff6b81;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 107, 129, 0.4);
+        }
+        .btn:hover {
+            background-color: #ff4757;
+            transform: scale(1.05);
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+        }
+        video {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- الواجهة الأولى -->
+        <div class="gift-box" id="welcomeScreen">
+            <h1>🎁 لديك هدية ومكالمة في الانتظار!</h1>
+            <p>اضغطي على الزر أدناه لفتح المفاجأة...</p>
+            <button class="btn" onclick="openGift()">اضغطي هنا لفتح الهدية</button>
+        </div>
+
+        <!-- المحتوى المخفي (يطلع بعد الضغط) -->
+        <div class="hidden-content" id="surpriseScreen">
+            <h1>مكالمة خاصة لكِ! 📲</h1>
+            <p>شاهدي التفاصيل للنهاية...</p>
+            
+            <!-- مكان فيديو المكالمة (استبدلي الرابط برابط الفيديو الخاص بك) -->
+            <video controls autoplay>
+                <source src="رابط_فيديو_المكالمة_هنا.mp4" type="video/mp4">
+                متصفحك لا يدعم عرض الفيديو.
+            </video>
+
+            <div style="margin-top: 30px;">
+                <h2 style="color: #ff6b81; font-size: 20px;">ولأنك تستاهلين الأحسن.. لقطات لجي تشانغ ووك 😍</h2>
+                <!-- فيديو إضافي أو صور لجي تشانغ ووك -->
+                <video controls style="margin-top: 15px;">
+                    <source src="رابط_فيديو_جي_تشأنگ_ووك_هنا.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openGift() {
+            document.getElementById('welcomeScreen').style.display = 'none';
+            document.getElementById('surpriseScreen').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
