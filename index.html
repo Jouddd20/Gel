@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مفاجأة جي تشانغ ووك الخاصة</title>
     <style>
-        /* أساسيات التصميم العام */
         body {
-            background-color: #080808; /* أسود غامق جداً */
+            background-color: #080808;
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -16,7 +15,6 @@
             overflow-x: hidden;
         }
 
-        /* شاشة الترحيب (المفاجأة) */
         #welcomeScreen {
             display: flex;
             flex-direction: column;
@@ -29,7 +27,7 @@
 
         #welcomeScreen h1 {
             font-size: 40px;
-            color: #ff6b81; /* وردي فاقع */
+            color: #ff6b81;
             margin-bottom: 20px;
             text-shadow: 0 0 15px rgba(255, 107, 129, 0.5);
         }
@@ -53,7 +51,6 @@
             box-shadow: 0 15px 30px rgba(255, 107, 129, 0.5);
         }
 
-        /* الموقع الرئيسي (المخفي) */
         #mainSite {
             display: none;
             padding: 40px 20px;
@@ -67,6 +64,7 @@
         header h1 {
             font-size: 36px;
             margin: 0;
+            color: #fff;
         }
 
         header p {
@@ -74,7 +72,6 @@
             font-size: 18px;
         }
 
-        /* قسم الفيديو الخاص */
         .video-section {
             max-width: 800px;
             margin: 0 auto 60px auto;
@@ -97,7 +94,6 @@
             margin-top: 15px;
         }
 
-        /* معرض الصور (Gallery) */
         .gallery-section h2 {
             text-align: center;
             margin-bottom: 30px;
@@ -119,6 +115,8 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             transition: 0.4s;
+            background: #151515;
+            border: 1px solid #222;
         }
 
         .gallery-item:hover {
@@ -129,8 +127,8 @@
 
         .gallery-item img {
             width: 100%;
-            height: 300px; /* طول ثابت للصور */
-            object-fit: cover; /* عشان الصور ماتتمط */
+            height: 300px;
+            object-fit: cover;
             display: block;
         }
         
@@ -141,12 +139,10 @@
             font-size: 14px;
         }
 
-        /* تأثير الانتقال عند الضغط */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
     </style>
 </head>
 <body>
@@ -165,7 +161,7 @@
 
         <div class="video-section">
             <h2>🎬 خاص جداً</h2>
-            <p style="color: #aaa; margin-bottom: 15px;">رسالة لكِ من جي تشانغ ووك..</p>
+            <p style="color: #aaa; margin-bottom: 15px;">رسالة لكِ..</p>
             <video controls>
                 <source src="رابط_فيديو_المكالمة_الخاص.mp4" type="video/mp4">
                 متصفحك لا يدعم تشغيل الفيديو.
@@ -175,18 +171,19 @@
         <div class="gallery-section">
             <h2>Photo Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/96/b4/58/96b4586723162a285421c03a3b0a2a94.jpg" alt="Ji Chang Wook 1"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/64/60/ac/6460accab5a7247f7f420c57c7905c28.jpg" alt="Ji Chang Wook 2"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/36/48/f1/3648f1030a7f374697a69302ea7f4611.jpg" alt="Ji Chang Wook 3"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/58/b0/92/58b09259c28e9362f72d310f4476a2b5.jpg" alt="Ji Chang Wook 4"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/67/8b/84/678b8406c09e72c69d504980753a594c.jpg" alt="Ji Chang Wook 5"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/73/e3/ab/73e3ab68178861f566683b4f5c591e4a.jpg" alt="Ji Chang Wook 6"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/3e/26/95/3e269531e5c9e6e364f5965c30afb88e.jpg" alt="Ji Chang Wook 7"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/08/4d/0a/084d0a3a358098b8b573c97e3d658678.jpg" alt="Ji Chang Wook 8"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/d5/50/c9/d550c91021d169552d5c374b8796844e.jpg" alt="Ji Chang Wook 9"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/83/b5/18/83b51813f7297e2ae184634258181c84.jpg" alt="Ji Chang Wook 10"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/57/c0/60/57c06064881f0955d6e8b63f4794c2c0.jpg" alt="Ji Chang Wook 11"></div>
-                <div class="gallery-item"><img src="https://i.pinimg.com/736x/79/9d/81/799d814ef837c5ae40eb944656d0e3b2.jpg" alt="Ji Chang Wook 12"></div>
+                <!-- استخدام روابط صور آمنة ومفتوحة مباشرة -->
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 1"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 2"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 3"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 4"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 5"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 6"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 7"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 8"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 9"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 10"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 11"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60" alt="Ji Chang Wook 12"></div>
             </div>
         </div>
         
