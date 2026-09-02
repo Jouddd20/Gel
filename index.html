@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مفاجأة جي تشانغ ووك الخاصة</title>
+    <style>
+        /* أساسيات التصميم العام */
+        body {
+            background-color: #080808; /* أسود غامق جداً */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* شاشة الترحيب (المفاجأة) */
+        #welcomeScreen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #080808 0%, #1a1a1a 100%);
+            text-align: center;
+        }
+
+        #welcomeScreen h1 {
+            font-size: 40px;
+            color: #ff6b81; /* وردي فاقع */
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 107, 129, 0.5);
+        }
+
+        .enter-btn {
+            background: linear-gradient(45deg, #ff6b81, #ff4757);
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 22px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(255, 107, 129, 0.3);
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 107, 129, 0.5);
+        }
+
+        /* الموقع الرئيسي (المخفي) */
+        #mainSite {
+            display: none;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        /* قسم الفيديو الخاص */
+        .video-section {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            background: #111;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid #ff6b81;
+        }
+
+        .video-section h2 {
+            color: #ff6b81;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+
+        /* معرض الصور (Gallery) */
+        .gallery-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+            color: #ff6b81;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+            border-color: #ff6b81;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px; /* طول ثابت للصور */
+            object-fit: cover; /* عشان الصور ماتتمط */
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* تأثير الانتقال عند الضغط */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="welcomeScreen">
+        <h1>مفاجأة خاصة لكِ!</h1>
+        <p style="color: #ccc; font-size: 18px; margin-top: 10px;">اضغطي للدخول إلى عالم جي تشانغ ووك..</p>
+        <button class="enter-btn" onclick="openSurprise()">دخول المفاجأة ✨</button>
+    </div>
+
+    <div id="mainSite">
+        <header>
+            <h1>Ji Chang Wook</h1>
+            <p>My Special Collection</p>
+        </header>
+
+        <div class="video-section">
+            <h2>🎬 خاص جداً</h2>
+            <p style="color: #aaa; margin-bottom: 15px;">رسالة لكِ من جي تشانغ ووك..</p>
+            <video controls>
+                <source src="رابط_فيديو_المكالمة_الخاص.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/96/b4/58/96b4586723162a285421c03a3b0a2a94.jpg" alt="Ji Chang Wook 1"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/64/60/ac/6460accab5a7247f7f420c57c7905c28.jpg" alt="Ji Chang Wook 2"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/36/48/f1/3648f1030a7f374697a69302ea7f4611.jpg" alt="Ji Chang Wook 3"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/58/b0/92/58b09259c28e9362f72d310f4476a2b5.jpg" alt="Ji Chang Wook 4"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/67/8b/84/678b8406c09e72c69d504980753a594c.jpg" alt="Ji Chang Wook 5"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/73/e3/ab/73e3ab68178861f566683b4f5c591e4a.jpg" alt="Ji Chang Wook 6"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/3e/26/95/3e269531e5c9e6e364f5965c30afb88e.jpg" alt="Ji Chang Wook 7"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/08/4d/0a/084d0a3a358098b8b573c97e3d658678.jpg" alt="Ji Chang Wook 8"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/d5/50/c9/d550c91021d169552d5c374b8796844e.jpg" alt="Ji Chang Wook 9"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/83/b5/18/83b51813f7297e2ae184634258181c84.jpg" alt="Ji Chang Wook 10"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/57/c0/60/57c06064881f0955d6e8b63f4794c2c0.jpg" alt="Ji Chang Wook 11"></div>
+                <div class="gallery-item"><img src="https://i.pinimg.com/736x/79/9d/81/799d814ef837c5ae40eb944656d0e3b2.jpg" alt="Ji Chang Wook 12"></div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Created with love for Joud's Sister ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        function openSurprise() {
+            document.getElementById('welcomeScreen').style.display = 'none';
+            document.getElementById('mainSite').style.display = 'block';
+            document.getElementById('mainSite').style.animation = 'fadeIn 1s ease-in-out';
+        }
+    </script>
+
+</body>
+</html>
